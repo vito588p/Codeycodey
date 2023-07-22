@@ -4,6 +4,23 @@
 
 class Queue {
     // 實作寫在這裡
+    constructor() {
+      this.array = []
+    };
+
+    enqueue(item) {
+      if (item) {
+        this.array.push(item)
+      };
+    };
+
+    dequeue() {
+      return this.array.shift()
+    };
+
+    get length() {
+      return this.array.length
+    };
   }
   
   const queue = new Queue()
@@ -11,6 +28,7 @@ class Queue {
   queue.enqueue(456)
   queue.enqueue()
   console.log(queue.length) // 印出 2
+  // console.log(queue)
   
   const item = queue.dequeue() // 取出元素
   console.log(item) // 印出 123

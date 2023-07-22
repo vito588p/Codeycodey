@@ -4,6 +4,23 @@
 
 class Stack {
     // 實作寫在這裡
+    constructor() {
+      this.array = []
+    };
+
+    push(item) {
+      if (item) {
+        this.array.push(item)
+      };
+    };
+
+    get size() {
+      return this.array.length
+    };
+
+    pop() {
+      return this.array.pop()
+    };
   }
   
   const stack = new Stack()
@@ -11,6 +28,7 @@ class Stack {
   stack.push(456)
   stack.push()
   console.log(stack.size) // 印出 2
+  // console.log(stack)
   
   const item = stack.pop() // 取出元素
   console.log(item) // 印出 456
