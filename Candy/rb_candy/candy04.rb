@@ -4,7 +4,12 @@
 
 def humanReadableTimer seconds
   # 實作在這裡
-  Time.at(seconds).strftime("%H:%M:%S")
+  # Time.at(seconds).strftime("%H:%M:%S")
+  hrs = seconds / 3600
+  mins = seconds % 3600 / 60
+  secs = seconds % 3600 % 60
+  
+  format("%02d:%02d:%02d", hrs, mins, secs)
 end
 
 puts humanReadableTimer(0) # 印出 00:00:00
